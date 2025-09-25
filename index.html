@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MindMates Dashboard</title>
+  <style>
+    /* --- Basic Reset & global styles --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8;
+      color: #2c3e50;
+      min-height: 100vh;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* --- Header --- */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+    }
+    header h1 {
+      font-size: 2rem;
+    }
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+    nav a {
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: #dce6ed;
+    }
+
+    /* --- Dashboard Cards --- */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card h2 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .card p {
+      flex-grow: 1;
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+    .card button {
+      padding: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      align-self: flex-end;
+    }
+    .card button:hover {
+      background-color: #2980b9;
+    }
+
+    /* --- Mood Tracker Chart placeholder --- */
+    .chart-placeholder {
+      height: 200px;
+      background-color: #e8eff5;
+      border: 2px dashed #b0c4d6;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #7f8c8d;
+      font-style: italic;
+    }
+
+    /* --- Footer --- */
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #7f8c8d;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>MindMates</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">My Dashboard</a>
+        <a href="#">Self-Help</a>
+        <a href="#">Resources</a>
+        <a href="#">Support</a>
+      </nav>
+    </header>
+
+    <section class="cards">
+      <div class="card">
+        <h2>Mood Tracker</h2>
+        <div class="chart-placeholder">[ Mood Chart ]</div>
+        <button>View Details</button>
+      </div>
+      <div class="card">
+        <h2>Daily Check-In</h2>
+        <p>How are you feeling today? Rate your mood / stress levels.</p>
+        <button>Start Check-In</button>
+      </div>
+      <div class="card">
+        <h2>Self-Help Modules</h2>
+        <p>Exercises for anxiety, guided meditations, breathing techniques.</p>
+        <button>Explore Modules</button>
+      </div>
+      <div class="card">
+        <h2>Connect for Help</h2>
+        <p>Chat with peer counselor or mental health professional.</p>
+        <button>Contact Support</button>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 MindMates | Higher Education Mental Health Support
+    </footer>
+  </div>
+</body>
+</html>
